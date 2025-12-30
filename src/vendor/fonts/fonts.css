@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Cabinet Grotesk Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("CabinetGrotesk-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("CabinetGrotesk-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk Thin";
+  font-style: normal;
+  font-weight: 400;
+  src: url("CabinetGrotesk-Thin.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk Extralight";
+  font-style: normal;
+  font-weight: 400;
+  src: url("CabinetGrotesk-Extralight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk Light";
+  font-style: normal;
+  font-weight: 400;
+  src: url("CabinetGrotesk-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk Bold";
+  font-style: normal;
+  font-weight: 400;
+  src: url("CabinetGrotesk-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk Extrabold";
+  font-style: normal;
+  font-weight: 400;
+  src: url("CabinetGrotesk-Extrabold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cabinet Grotesk Black";
+  font-style: normal;
+  font-weight: 400;
+  src: url("CabinetGrotesk-Black.woff") format("woff");
+}

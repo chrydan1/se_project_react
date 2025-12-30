@@ -1,0 +1,145 @@
+/* MODAL CARD STYLES */
+
+.modal {
+  font-family: "Cabinet Grotesk Bold", sans-serif;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  padding: 0 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_is-opened {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.modal__container {
+  width: 498px;
+  height: 610px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: none;
+}
+
+.modal__image {
+  display: block;
+  width: 498px;
+  height: 498px;
+}
+
+.modal__close-btn {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 0;
+}
+
+.modal__footer {
+  background-color: #fff;
+}
+
+.modal__text-garment {
+  padding-top: 20px;
+  margin: 0;
+  font-size: 20px;
+  padding-left: 32px;
+}
+
+.modal__text-weather {
+  margin: 0;
+  font-size: 20px;
+  padding: 12px 0 32px 32px;
+}
+
+.modal__footer {
+  height: 112px;
+}
+
+/* MODAL FORM STYLES */
+
+.modal__container_type_form {
+  padding: 28px 28px 36px;
+  max-width: 496px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.modal__close-btn_type_form {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+}
+
+.modal__close-btn_logo_form {
+  width: 30px;
+  height: 30px;
+}
+
+.modal__input {
+  display: block;
+}
+
+.modal__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.modal__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  margin-top: 8px;
+  box-sizing: border-box;
+  margin-bottom: 28px;
+  padding-left: 0;
+  padding-bottom: 4px;
+}
+
+.modal__radio-btn {
+  margin-right: 8px;
+}
+
+.modal__submit-btn {
+  margin-top: 32px;
+  border: none;
+  color: #fff;
+  background-color: #0000004d;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.modal__label-radio {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.modal__label-radio--primary {
+  margin-top: 12px;
+}
