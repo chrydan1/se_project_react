@@ -7,7 +7,7 @@ const weatherConditionImages = {
             name: "default",
             image: new URL("../assets/day/defaultday.svg", import.meta.url).href,
         },
-        clear: {
+        Clear: {
             name: "clearday",
             image: new URL("../assets/day/clearday.svg", import.meta.url).href,
         },
@@ -38,7 +38,7 @@ const weatherConditionImages = {
             image: new URL("../assets/night/defaultnight.svg", import.meta.url).href,
         },
 
-        clear: {
+        Clear: {
             name: "clearnight",
             image: new URL("../assets/night/clearnight.svg", import.meta.url).href,
         },
