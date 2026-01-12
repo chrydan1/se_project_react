@@ -1,4 +1,4 @@
-import "./itemCard.css";
+import "./ItemCard.css";
 
 function ItemCard({ data, onCardClick }) {
   function handleOpenCard() {
