@@ -1,4 +1,5 @@
 import btnX from "../../assets/close_x.svg";
+import "./ModalWithForm.css";
 
 function ModalWithForm({
   isOpen,

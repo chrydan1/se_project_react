@@ -3,7 +3,6 @@ import "./ToggleSwitch.css";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
 
 function ToggleSwitch() {
-    // TODO - destructure the handler
     const contextValue = useContext(CurrentTemperatureUnitContext);
    
   return (
