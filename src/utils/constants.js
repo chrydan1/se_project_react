@@ -15,7 +15,7 @@ const weatherConditionImages = {
             name: "cloudyday",
             image: new URL("../assets/day/cloudyday.svg", import.meta.url).href,
         },
-        fog: {
+        Fog: {
             name: "fogday",
             image: new URL("../assets/day/fogday.svg", import.meta.url).href,
         },
@@ -23,11 +23,11 @@ const weatherConditionImages = {
             name: "snowday",
             image: new URL("../assets/day/snowday.svg", import.meta.url).href,
         },
-        storm: {
+        Storm: {
             name: "stormday",
             image: new URL("../assets/day/stormday.svg", import.meta.url).href,
         },
-        rain: {
+        Rain: {
             name: "rainday",
             image: new URL("../assets/day/rainday.svg", import.meta.url).href,
         },
@@ -46,7 +46,7 @@ const weatherConditionImages = {
             name: "cloudynight",
             image: new URL("../assets/night/cloudynight.svg", import.meta.url).href,
         },
-        fog: {
+        Fog: {
             name: "fognight",
             image: new URL("../assets/night/fognight.svg", import.meta.url).href,
         },
@@ -54,11 +54,11 @@ const weatherConditionImages = {
             name: "snownight",
             image: new URL("../assets/night/snownight.svg", import.meta.url).href,
         },
-        storm: {
+        Storm: {
             name: "stormnight",
             image: new URL("../assets/night/stormnight.svg", import.meta.url).href,
         },
-        rain: {
+        Rain: {
             name: "rainnight",
             image: new URL("../assets/night/rainnight.svg", import.meta.url).href,
         },
