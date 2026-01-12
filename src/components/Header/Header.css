@@ -1,28 +1,30 @@
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 28px;
 }
 
+.header__side{
+  display: flex;
+  align-items: center;
+}
+
+
 .header__add-clothes-btn {
-  margin-left: auto;
   border: none;
   background-color: transparent;
   cursor: pointer;
+  margin: 0 20px;
+  font-family: "Cabinet Grotesk Bold", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .header__logo {
   width: 89px;
   height: 40px;
   margin-right: 20px;
-}
-
-.header__add-clothes-btn {
-  margin-left: auto;
-  margin-right: 20px;
-  font-family: "Cabinet Grotesk Bold", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
 }
 
 .header__username {
