@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Cabinet Grotesk Bold", sans-serif;
+  padding: 16px 24px;
+  font-size: 16px;
+  color: #000;
+  margin-top: 172px;
+}
+
+.footer__left,
+.footer__right {
+  margin: 0;
+}
