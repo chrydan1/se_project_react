@@ -15,7 +15,7 @@ function Main({ clothingItems, handleOpenItemModal, weatherData }) {
         {clothingItems.map((item) => {
           return (
             <ItemCard
-              key={item._id}
+              key={item._id ?? item.link}
               data={item}
               onCardClick={handleOpenItemModal}
             />

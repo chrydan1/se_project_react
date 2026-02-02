@@ -48,3 +48,10 @@
   font-weight: 700;
   font-size: 20px;
 }
+
+.header__link{
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  align-items: center;
+}
