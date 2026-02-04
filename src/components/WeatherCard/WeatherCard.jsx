@@ -5,12 +5,9 @@ import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnit
 import { weatherConditionImages } from "../../utils/constants";
 
 function WeatherCard({ weatherData }) {
-  // TODO-destructure the current temp unit
-
+  
   const contextValue = useContext(CurrentTemperatureUnitContext);
   const timeOfDay = weatherData.isDay ? "day" : "night";
-
-  //TODO vary image base on day/night (hint:ternary)
 
   return (
     <section className="weather-card">

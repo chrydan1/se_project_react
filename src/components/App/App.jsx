@@ -5,7 +5,6 @@ import Footer from "../Footer/Footer";
 import Main from "../Main/Main";
 import Header from "../Header/Header";
 import ItemModal from "../ItemModal/ItemModal";
-// import { defaultClothingItems } from "../../utils/defaultClothingItems";
 import { getWeatherData } from "../../utils/weatherApi";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
 import Profile from "../Profile/Profile";
@@ -43,13 +42,13 @@ function App() {
   }
 
   function handleAddItemSubmit(inputValues) {
-  addItem(inputValues)
-    .then((data) => {
-      setClothingItems((prevItems) => [data, ...prevItems]);
-      handleCloseModal();
-    })
-    .catch(console.error);
-}
+    addItem(inputValues)
+      .then((data) => {
+        setClothingItems((prevItems) => [data, ...prevItems]);
+        handleCloseModal();
+      })
+      .catch(console.error);
+  }
 
   function handleDeleteItem(card) {
     const id = card._id ?? card.id;
@@ -75,7 +74,6 @@ function App() {
   useEffect(() => {
     getItems()
       .then((items) => {
-        //TODO - make new items appear first
         setClothingItems([...items].reverse());
       })
       .catch(console.error);
