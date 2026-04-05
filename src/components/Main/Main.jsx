@@ -4,25 +4,20 @@ import "./Main.css";
 import { useContext } from "react";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
 
-function Main({ clothingItems, handleOpenItemModal, weatherData }) {
-  
+function Main({ clothingItems, handleOpenItemModal, weatherData, onCardLike }) {
   const { currentTempUnit } = useContext(CurrentTemperatureUnitContext);
 
   const temp = weatherData?.temp?.[currentTempUnit];
 
-  const tempF =
-    currentTempUnit === "F" ? temp : (temp * 9) / 5 + 32;
+  const tempF = currentTempUnit === "F" ? temp : (temp * 9) / 5 + 32;
 
   let weatherType = "warm";
   if (tempF <= 45) weatherType = "cold";
   if (tempF >= 75) weatherType = "hot";
 
   const filteredItems = clothingItems.filter(
-    (item) => item.weather === weatherType
+    (item) => item.weather === weatherType,
   );
-
-  console.log("clothingItems length:", clothingItems.length);
-console.log("ids:", clothingItems.map(i => i._id ?? i.link));
 
   return (
     <main className="main">
@@ -39,6 +34,7 @@ console.log("ids:", clothingItems.map(i => i._id ?? i.link));
             key={item._id ?? item.link}
             data={item}
             onCardClick={handleOpenItemModal}
+            onCardLike={onCardLike}
           />
         ))}
       </ul>

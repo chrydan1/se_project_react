@@ -14,6 +14,7 @@
   padding: 0 10px;
   visibility: hidden;
   opacity: 0;
+  z-index: 1000;
   transition:
     visibility 0s linear 0.5s,
     opacity 0.5s linear;
@@ -26,14 +27,6 @@
   transition-delay: 0s;
 }
 
-.modal__container {
-  width: 498px;
-  height: 610px;
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  border: none;
-}
 
 .modal__image {
   display: block;

@@ -1,26 +1,31 @@
-import { useForm } from "../../hooks/useForm"
+import { useForm } from "../../hooks/useForm";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 function AddItemModal({ isOpen, onClose, handleAddItemSubmit }) {
-  const { values, handleChange, setValues } = useForm({ name: "", weather: "", imageUrl: "" });
+  const { values, handleChange, setValues } = useForm({
+    name: "",
+    weather: "",
+    imageUrl: "",
+  });
+
+  const isFormValid = values.name && values.imageUrl && values.weather;
 
   const handleSubmit = (event) => {
     event.preventDefault();
     handleAddItemSubmit(values);
-    setValues({ name: "", weather: "", link: "" }); 
-    onClose(); 
+    setValues({ name: "", weather: "", imageUrl: "" });
+    onClose();
   };
-
-//TODO - implement reset to the form
 
   return (
     <ModalWithForm
       isOpen={isOpen}
       title={"New Garment"}
       buttonText={"Add garment"}
-      name="add-garment-form"
       onClose={onClose}
-      handleSubmit={handleSubmit}
+      onSubmit={handleSubmit}
+      isSubmitDisabled={!isFormValid}
+      containerModifier="modal__container_type_add-garment"
     >
       <fieldset className="modal__fieldset">
         <label htmlFor="add-garment-name-input" className="modal__label">
@@ -32,21 +37,20 @@ function AddItemModal({ isOpen, onClose, handleAddItemSubmit }) {
             className="modal__input"
             name="name"
             value={values.name}
-            onChange={handleChange}           
+            onChange={handleChange}
           />
         </label>
 
         <label htmlFor="add-garment-link-input" className="modal__label">
-          Image Link
+          Image
           <input
             id="add-garment-link-input"
             type="url"
             placeholder="Image URL"
             className="modal__input"
             name="imageUrl"
-            value={values.imageUrl}   
-            onChange={handleChange}           
-
+            value={values.imageUrl}
+            onChange={handleChange}
           />
         </label>
       </fieldset>
@@ -68,8 +72,7 @@ function AddItemModal({ isOpen, onClose, handleAddItemSubmit }) {
               name="weather"
               value="hot"
               checked={values.weather === "hot"}
-              onChange={handleChange}           
-
+              onChange={handleChange}
             />
             Hot
           </label>
@@ -84,8 +87,7 @@ function AddItemModal({ isOpen, onClose, handleAddItemSubmit }) {
               id="warm"
               value="warm"
               checked={values.weather === "warm"}
-              onChange={handleChange}           
-              
+              onChange={handleChange}
             />
             Warm
           </label>
@@ -101,7 +103,6 @@ function AddItemModal({ isOpen, onClose, handleAddItemSubmit }) {
               value="cold"
               checked={values.weather === "cold"}
               onChange={handleChange}
-
             />
             Cold
           </label>

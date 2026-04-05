@@ -2,13 +2,26 @@ import ClothesSection from "../ClothesSection/ClothesSection";
 import SideBar from "../SideBar/SideBar";
 import "./Profile.css";
 
-function Profile({clothingItems, handleOpenAddGarmentModal, handleOpenItemModal}) {
+function Profile({
+  clothingItems,
+  handleOpenAddGarmentModal,
+  handleOpenItemModal,
+  onCardLike,
+  handleSignOut,
+  handleOpenEditProfileModal,
+}) {
   return (
     <main className="profile">
-      <SideBar />
-      <ClothesSection clothingItems={clothingItems} 
-      handleOpenAddGarmentModal={handleOpenAddGarmentModal}
-      handleOpenItemModal={handleOpenItemModal}
+      <SideBar
+        handleSignOut={handleSignOut}
+        handleOpenEditProfileModal={handleOpenEditProfileModal}
+      />
+
+      <ClothesSection
+        clothingItems={clothingItems}
+        handleOpenAddGarmentModal={handleOpenAddGarmentModal}
+        handleOpenItemModal={handleOpenItemModal}
+        onCardLike={onCardLike}
       />
     </main>
   );

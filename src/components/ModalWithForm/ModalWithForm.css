@@ -1,14 +1,22 @@
 /* MODAL FORM STYLES */
 
+.modal__container {
+  width: 498px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: none;
+  z-index: 1001;
+}
+
 .modal__container_type_form {
   padding: 28px 28px 36px;
   max-width: 496px;
   width: 100%;
-  height: 436px;
   background-color: #fff;
   border-radius: 20px;
   position: relative;
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
 
 .modal__title {
@@ -28,10 +36,6 @@
 .modal__close-btn_logo_form {
   width: 30px;
   height: 30px;
-}
-
-.modal__input {
-  display: block;
 }
 
 .modal__fieldset {
@@ -55,11 +59,13 @@
   margin-right: 8px;
 }
 
+/* Add Garment Module */
+
 .modal__submit-btn {
   margin-top: 32px;
   border: none;
   color: #fff;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 8px 16px;
   border-radius: 8px;
   font-size: 16px;
@@ -67,8 +73,12 @@
   cursor: pointer;
 }
 
-.modal__submit-btn:hover {
-  background-color: #00000099;
+.modal__submit-btn:not(:disabled) {
+  background-color: #000;
+}
+
+.modal__submit-btn:not(:disabled):hover {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal__label-radio {
@@ -83,4 +93,70 @@
 
 .modal__label {
   height: 52px;
+}
+
+.modal__submit-btn:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+.modal__alternate {
+  display: inline;
+  margin-top: 16px;
+  font-size: 16px;
+  color: #000;
+  margin-left: 12px;
+}
+
+.modal__alternate-button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal__alternate-button:hover {
+  color: #000;
+}
+
+.modal__alternate-text {
+  color: rgba(0, 0, 0, 0.5); /* gris */
+}
+
+/* Log in Module */
+
+.modal__container_type_login {
+  height: 304px;
+}
+
+.modal__error-message {
+  color: rgba(255, 77, 0, 1);
+  font-size: 16 px;
+  margin-top: 8px;
+}
+
+.modal__container_type_login-error {
+  height: 348px;
+}
+
+.modal__input_type_password{
+  margin-bottom: 0;
+}
+
+
+/* Sign up Module */
+
+.modal__container_type_signup {
+  min-height: 456px;
+}
+
+
+/* Add Garment Module */
+
+.modal__container_type_add-garment {
+  height: 436px;
 }
