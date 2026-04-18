@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3001";
+import {baseUrl} from "../utils/constants"
 
 function getItems() {
   return fetch(`${baseUrl}/items`).then((res) => {
