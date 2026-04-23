@@ -1,7 +1,7 @@
 const coordinates = { lat: "40.4241018", lon: "-79.9246422" };
 const apiKey = "73942b758339556cafe1244482aadb49";
 
-const baseUrl = process.env.NODE_ENV === "production" 
+const baseUrl = import.meta.env.PROD
   ? "https://api.chrydan-wtwr.jumpingcrab.com"
   : "http://localhost:3001";
 
