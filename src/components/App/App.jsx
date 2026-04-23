@@ -249,6 +249,7 @@ function App() {
             isOpen={activeModal === "item-modal"}
             onClose={handleCloseModal}
             handleDeleteItem={handleDeleteItem}
+            isLoggedIn={isLoggedIn}
           />
 
           <AddItemModal

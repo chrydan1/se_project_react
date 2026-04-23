@@ -3,11 +3,12 @@ import btnXWhite from "../../assets/delete_white_x.svg";
 import { useContext } from "react";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 
-function ItemModal({ card, isOpen, onClose, handleDeleteItem }) {
+function ItemModal({ card, isOpen, onClose, handleDeleteItem, isLoggedIn }) {
   const currentUser = useContext(CurrentUserContext);
 
-  const isOwn =
-    card.owner?._id === currentUser._id || card.owner === currentUser._id;
+  const ownerId = card.owner?._id || card.owner;
+  const isOwn = ownerId === currentUser?._id;
+  const canDelete = isLoggedIn && isOwn;
 
   function handleDelete() {
     handleDeleteItem(card);
@@ -32,7 +33,7 @@ function ItemModal({ card, isOpen, onClose, handleDeleteItem }) {
             <h2 className="modal__text-weather">Weather: {card.weather}</h2>
           </div>
 
-          {isOwn && (
+          {canDelete && (
             <button onClick={handleDelete} className="modal__delete-btn">
               Delete
             </button>
