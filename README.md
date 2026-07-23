@@ -1,19 +1,57 @@
-# React + Vite
+# WTWR — What to Wear?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+WTWR is a full-stack weather-based clothing recommendation application. It uses the user's local weather conditions to recommend suitable clothing items.
 
-Currently, two official plugins are available:
+This repository contains the **React frontend** of the application. It communicates with a separate REST API backend responsible for authentication, user data, and clothing-item management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Full-Stack Project Repositories
 
+- **Frontend:** [WTWR Frontend](https://github.com/chrydan1/wtwr-frontend)
+- **Backend:** [WTWR Backend](https://github.com/chrydan1/se_project_express)
 
- Check out [this video](https://drive.google.com/file/d/1XTFEcH8QFTtNP0Sp9JYhjIFBvJNWE19O/view?usp=drive_link), where I describe my 
- project and some challenges I faced while building it.
+## Main Features
 
+- Displays the current temperature and weather conditions
+- Recommends clothing based on the local weather
+- Allows users to create an account and log in
+- Uses JWT authentication and protected routes
+- Allows users to add and delete clothing items
+- Allows users to like and unlike clothing items
+- Allows users to update their profile information
+- Connects the React frontend to a Node.js and Express REST API
 
- # WTWR (What to Wear?)
+## Technologies
 
-## Backend Repository
-[Link to Backend Repository](git@github.com:chrydan1/se_project_express.git)
+### Frontend
 
+- React
+- JavaScript
+- Vite
+- React Router
+- CSS
+- REST API integration
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JSON Web Tokens
+- REST API
+
+## Project Architecture
+
+The application is divided into two connected repositories:
+
+1. The React frontend displays the interface and sends HTTP requests.
+2. The Express backend processes those requests, manages authentication, and communicates with MongoDB.
+3. The backend returns data to the frontend as JSON.
+4. The frontend updates the user interface using the received data.
+
+## Running the Frontend Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/chrydan1/wtwr-frontend.git
